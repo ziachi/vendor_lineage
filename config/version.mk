@@ -10,6 +10,8 @@ MATRIXX_BUILD_TYPE ?= Unofficial
 
 ifeq ($(WITH_GMS), true)
   MATRIXX_BUILD_VARIANT := Gapps
+else ifeq ($(WITH_MICROG), true)
+  MATRIXX_BUILD_VARIANT := MicroG
 else
   MATRIXX_BUILD_VARIANT := Vanilla
 endif
