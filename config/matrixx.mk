@@ -48,11 +48,6 @@ endif
 PRODUCT_COPY_FILES += \
     vendor/lineage/prebuilt/common/etc/sysconfig/preinstalled-packages-platform-crdroid-product.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/preinstalled-packages-platform-crdroid-product.xml
 
-# ColumbusService
-ifneq ($(TARGET_SUPPORTS_QUICK_TAP),false)
-PRODUCT_PACKAGES += \
-    ColumbusService
-endif
 
 # Disable async MTE on a few processes
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
@@ -65,19 +60,7 @@ PRODUCT_SYSTEM_EXT_PROPERTIES += \
 PRODUCT_SYSTEM_EXT_PROPERTIES += \
     dalvik.vm.dex2oat64.enabled=true
 
-# Extra packages
-PRODUCT_PACKAGES += \
-    BatteryStatsViewer \
-    GameSpace \
-    LMOFreeform \
-    LMOFreeformSidebar \
-    OmniJaws \
-    OmniStyle
 
-ifneq ($(TARGET_DISABLE_MATLOG),true)
-PRODUCT_PACKAGES += \
-    MatLog
-endif
 
 # Default Game prop values
 TARGET_PRODUCT_PROP += vendor/lineage/config/gameprops.prop
@@ -87,9 +70,6 @@ BYPASS_CHARGE_SUPPORTED ?= false
 PRODUCT_SYSTEM_PROPERTIES += \
     persist.sys.battery_bypass_supported=$(BYPASS_CHARGE_SUPPORTED)
 
-# AvatarPicker
-PRODUCT_PACKAGES += \
-    AvatarPicker
 
 ifneq ($(TARGET_FACE_UNLOCK_SUPPORTED),false)
 PRODUCT_PACKAGES += \

@@ -15,8 +15,6 @@ PRODUCT_PRODUCT_PROPERTIES += \
 
 # Apps
 PRODUCT_PACKAGES += \
-    AvatarPicker \
-    Backgrounds \
     Glimpse \
     LatinIME
 
@@ -54,5 +52,3 @@ PRODUCT_ARTIFACT_PATH_REQUIREMENT_ALLOWED_LIST += \
 
 # Themes
 PRODUCT_PACKAGES += \
-    ThemePicker \
-    ThemesStub
